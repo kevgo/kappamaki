@@ -1,4 +1,4 @@
-# Kappamaki
+# Kappamaki <a href="https://travis-ci.org/Originate/kappamaki" alt="Build Status" target="_blank"><img src="https://travis-ci.org/Originate/kappamaki.svg?branch=master"></a>
 
 _Tools for natural, high-level, sophisticated Cucumber steps._
 
