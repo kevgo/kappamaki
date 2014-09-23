@@ -2,7 +2,8 @@
 
 _Tools for natural, high-level, sophisticated Cucumber steps._
 
-The name comes from the delicious sushi filled with pieces of cucumber.
+The name comes from the sushi roll filled with pieces of cucumber,
+which adds naturalness and freshness to a meal.
 
 
 ## Usage
@@ -12,7 +13,7 @@ in your Cucumber step definitions.
 It allows for Cucumber steps that look like this:
 
 ```cucumber
-Given I have a dinner with starter: "miso soup", entree: "sushi", and beverage: "matcha"
+Given I have a dinner with starter: "miso soup" and entree: "sushi"
 ```
 
 Your step definition would look like this:
@@ -21,18 +22,17 @@ Your step definition would look like this:
 Given /^I have a dinner with (.+)$/ do |dinner_attributes|
 
   # dinner_attributes is this string:
-  'starter: "miso soup", entree: "sushi", and beverage: "matcha"'
+  'starter: "miso soup" and entree: "sushi"'
 
   # Let's parse that string using Kappamaki
-  expected_dinner = Kappamaki.attributes_from_sentence dinner_attributes
+  dinner_data = Kappamaki.attributes_from_sentence(dinner_attributes)
 
-  # expected_dinner is this hash:
+  # The result, dinner_data, is this hash:
   { starter: "miso soup",
-    entree: "sushi",
-    beverage: "matcha" }
+    entree: "sushi" }
 
-  # Now we can verify this hash easily against our system under test
-  expect(actual_dinner).to eq expected_dinner
+  # now we can set up our system using this data
+  create :dinner, dinner_data
 end
 ```
 
