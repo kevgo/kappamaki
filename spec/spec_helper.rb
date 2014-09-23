@@ -1,6 +1,5 @@
 require 'bundler/setup'
 Bundler.setup
-
 require 'kappamaki'
 
 RSpec.configure do |config|
@@ -8,4 +7,3 @@ RSpec.configure do |config|
   config.order = 'random'
   config.formatter = 'documentation'
 end
-

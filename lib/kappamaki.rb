@@ -1,11 +1,15 @@
 module Kappamaki
 
-  # Parses a given list of key-value pairs into a Hash
+  # Parses a given string containing key-value pairs into a Hash
+  #
+  # Values must be delimited by double-quotes, like this:
+  # key: "value"
   def self.attributes_from_sentence sentence
     attributes = Kappamaki.from_sentence(sentence)
-                          .map{|a| a.split ': '}
+                          .map{|piece| piece.split ': '}
                           .map{|key, value| [key.to_sym, value]}
-    Hash[*attributes.flatten]
+                          .flatten
+    Hash[*attributes]
   end
 
 
