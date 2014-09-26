@@ -35,5 +35,21 @@ describe Kappamaki do
       end
     end
   end
+
+
+  describe 'symbolize_keys_deep!' do
+
+    it 'converts string keys to symbols' do
+      actual = { 'one' => 'two', 'alpha' => 'beta' }
+      Kappamaki.symbolize_keys_deep! actual
+      expect(actual).to eq({ one: 'two', alpha: 'beta' })
+    end
+
+    it 'converts nested keys' do
+      actual = { 'one' => { 'alpha' => 'beta' }}
+      Kappamaki.symbolize_keys_deep! actual
+      expect(actual).to eq({ one: { alpha: 'beta' }})
+    end
+  end
 end
 

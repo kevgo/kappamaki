@@ -10,29 +10,92 @@ which adds naturalness and freshness to a meal.
 
 Kappamaki provides a number of helper methods that can be used directly
 in your Cucumber step definitions.
-It allows for Cucumber steps that look like this:
+
+### from_sentence
+
+Parses a list of values from a sentence.
 
 ```cucumber
-Given I have a dinner with starter: "miso soup" and entree: "sushi"
+Given the restaurant offers cucumber rolls, philadelphia rolls, and avocado rolls
 ```
 
 Your step definition would look like this:
 
 ```ruby
-Given /^I have a dinner with (.+)$/ do |dinner_attributes|
+Given /^the restaurant offers (.+)$/ do |menu_list|
 
-  # dinner_attributes is this string:
-  'starter: "miso soup" and entree: "sushi"'
+  # menu_list is this string:
+  'cucumber rolls, philadelphia rolls, and avocado rolls'
+
+  # Let's parse this into an array
+  menu = Kappamaki.from_sentence menu_list
+
+  # The result, menu, is this array:
+  ['cucumber rolls', 'philadelphia rolls', 'avocado rolls']
+
+  # Now we can set up our menu here...
+end
+```
+
+
+### attributes_from_sentence
+
+Parses key-value pairs from natural sentences.
+
+```cucumber
+When I order a dinner with starter: "miso soup" and entree: "cucumber rolls"
+```
+
+Your step definition would look like this:
+
+```ruby
+When /^I order a dinner with (.+)$/ do |order_items|
+
+  # order_items is this string:
+  'starter: "miso soup" and entree: "cucumber rolls"'
 
   # Let's parse that string using Kappamaki
-  dinner_data = Kappamaki.attributes_from_sentence(dinner_attributes)
+  order_data = Kappamaki.attributes_from_sentence(order_items)
 
-  # The result, dinner_data, is this hash:
+  # The result, order_data, is this hash:
   { starter: "miso soup",
-    entree: "sushi" }
+    entree: "cucumber rolls" }
 
-  # now we can set up our system using this data
-  create :dinner, dinner_data
+  # now we can set up our order...
+  create :order, order_data
+end
+```
+
+
+### symbolize_keys_deep
+
+Converts the keys of a hash into symbols.
+
+```cucumber
+Then I am served these items
+  | name          | count |
+  | miso soup     | 1     |
+  | cucumber roll | 8     |
+```
+
+Your step definition would look like this:
+
+```ruby
+Then ^I am served these items do |entrees|
+  entrees.hashes.each do |entree|
+
+    # entree is this hash:
+    { 'name' => 'miso soup', 'count' => '1' }
+
+    # Let's convert the keys to symbols.
+    Kappamaki.symbolize_keys_deep! entree
+
+    # Now entree is this hash:
+    { name: 'miso soup', count: '1' }
+
+    # Now we can use this hash in places that expect hashes with symbols
+    expect(order).to include entree
+  end
 end
 ```
 
