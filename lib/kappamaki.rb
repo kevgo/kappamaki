@@ -18,7 +18,7 @@ module Kappamaki
     sentence.gsub(', and ', ', ')
             .gsub(' and ', ', ')
             .split(', ')
-            .map{|s| s.gsub '"', ''}
+            .map{|s| s.delete '"'}
   end
 
 
