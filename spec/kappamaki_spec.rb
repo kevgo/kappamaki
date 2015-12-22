@@ -7,10 +7,10 @@ describe Kappamaki do
   test_data = {
 
     attributes_from_sentence: {
-      'name: "Foo"'                                => {name: "Foo"},
-      'name: "Foo" and body: "Bar"'                => {name: 'Foo', body: 'Bar'},
-      'name: "Foo", body: "Bar" and title: "Baz"'  => {name: 'Foo', body: 'Bar', title: "Baz"},
-      'name: "Foo", body: "Bar", and title: "Baz"' => {name: 'Foo', body: 'Bar', title: "Baz"}
+      'name: "Foo"'                                => { name: 'Foo' },
+      'name: "Foo" and body: "Bar"'                => { name: 'Foo', body: 'Bar' },
+      'name: "Foo", body: "Bar" and title: "Baz"'  => { name: 'Foo', body: 'Bar', title: 'Baz' },
+      'name: "Foo", body: "Bar", and title: "Baz"' => { name: 'Foo', body: 'Bar', title: 'Baz' }
     },
 
     from_sentence: {
@@ -42,14 +42,14 @@ describe Kappamaki do
     it 'converts string keys to symbols' do
       actual = { 'one' => 'two', 'alpha' => 'beta' }
       Kappamaki.symbolize_keys_deep! actual
-      expect(actual).to eq({ one: 'two', alpha: 'beta' })
+      expect(actual).to eq one: 'two', alpha: 'beta'
     end
 
     it 'converts nested keys' do
-      actual = { 'one' => { 'alpha' => 'beta' }}
+      actual = { 'one' => { 'alpha' => 'beta' } }
       Kappamaki.symbolize_keys_deep! actual
-      expect(actual).to eq({ one: { alpha: 'beta' }})
+      expect(actual).to eq one: { alpha: 'beta' }
     end
+
   end
 end
-
