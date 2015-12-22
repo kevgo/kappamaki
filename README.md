@@ -1,4 +1,4 @@
-# Kappamaki <a href="https://travis-ci.org/Originate/kappamaki" alt="Build Status" target="_blank"><img src="https://travis-ci.org/Originate/kappamaki.svg?branch=master"></a> [![Code Climate](https://codeclimate.com/github/Originate/kappamaki/badges/gpa.svg)](https://codeclimate.com/github/Originate/kappamaki) [![Coverage Status](https://coveralls.io/repos/Originate/kappamaki/badge.svg?branch=master&service=github)](https://coveralls.io/github/Originate/kappamaki?branch=master)
+# Kappamaki <a href="https://travis-ci.org/Originate/kappamaki" alt="Build Status" target="_blank"><img src="https://travis-ci.org/Originate/kappamaki.svg?branch=master"></a> [![Code Climate](https://codeclimate.com/github/Originate/kappamaki/badges/gpa.svg)](https://codeclimate.com/github/Originate/kappamaki) [![Coverage Status](https://coveralls.io/repos/Originate/kappamaki/badge.svg?branch=master&service=github)](https://coveralls.io/github/Originate/kappamaki?branch=master) [![Dependency Status](https://gemnasium.com/Originate/kappamaki.svg)](https://gemnasium.com/Originate/kappamaki)
 
 _Tools for natural, high-level, sophisticated Cucumber steps._
 
