@@ -55,11 +55,11 @@ When /^I order a dinner with (.+)$/ do |order_items|
   'starter: "miso soup" and entree: "cucumber rolls"'
 
   # Let's parse that string using Kappamaki
-  order_data = Kappamaki.attributes_from_sentence(order_items)
+  order_data = Kappamaki.attributes_from_sentence order_items
 
   # The result, order_data, is this hash:
-  { starter: "miso soup",
-    entree: "cucumber rolls" }
+  { starter: 'miso soup',
+    entree: 'cucumber rolls' }
 
   # now we can set up our order...
   create :order, order_data
@@ -107,10 +107,8 @@ end
 * add `require 'kappamaki'` to your `/features/support/env.rb` file
 
 
-## Contributing
+## Development
 
-1. Fork it ( https://github.com/Originate/kappamaki/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+* run tests: `bundle exec rake`
+* update dependencies: `bundle update`
+* push a new version to Rubygems: `rake release`
