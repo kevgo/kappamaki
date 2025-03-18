@@ -41,3 +41,6 @@ Layout/MultilineOperationIndentation:
 
 Style/WordArray:
   Enabled: false
+
+Style/SymbolArray:
+  EnforcedStyle: brackets
