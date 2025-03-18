@@ -8,18 +8,6 @@ AllCops:
 Layout/LineLength:
   Max: 100
 
-Layout/EmptyLinesAroundClassBody:
-  EnforcedStyle: empty_lines
-
-Layout/EmptyLinesAroundModuleBody:
-  EnforcedStyle: empty_lines
-
-Style/MethodDefParentheses:
-  EnforcedStyle: require_no_parentheses
-
-Layout/MultilineOperationIndentation:
-  Enabled: false
-
 Style/SymbolArray:
   EnforcedStyle: brackets
 
