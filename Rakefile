@@ -4,7 +4,7 @@ require 'rspec/core/rake_task'
 
 RSpec::Core::RakeTask.new :spec
 
-task default: %i(lint spec)
+task default: %i[lint spec]
 
 desc 'Run linter'
 task 'lint' do
