@@ -39,8 +39,8 @@ Style/MethodDefParentheses:
 Layout/MultilineOperationIndentation:
   Enabled: false
 
-Style/WordArray:
-  Enabled: false
-
 Style/SymbolArray:
   EnforcedStyle: brackets
+
+Style/WordArray:
+  Enabled: false
