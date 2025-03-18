@@ -5,20 +5,8 @@ AllCops:
   Include:
     - '**/Rakefile'
 
-Security/Eval:
-  Enabled: false
-
 Layout/LineLength:
   Max: 100
-
-Layout/AccessModifierIndentation:
-  EnforcedStyle: outdent
-
-Style/Documentation:
-  Enabled: false
-
-Layout/EmptyLines:
-  Enabled: false
 
 Layout/EmptyLinesAroundClassBody:
   EnforcedStyle: empty_lines
