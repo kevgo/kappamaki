@@ -13,7 +13,7 @@ module Kappamaki
   end
 
 
-  # Reverse of Rails' to_sentence method
+  # Reverse of ActiveSupport's "to_sentence" method
   def self.from_sentence sentence
     sentence.gsub(', and ', ', ')
             .gsub(' and ', ', ')
