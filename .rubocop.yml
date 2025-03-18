@@ -1,5 +1,7 @@
 AllCops:
 
+  NewCops: enable
+
   DisplayCopNames: true
 
   DisplayStyleGuide: true
