@@ -1,13 +1,9 @@
-<a href="https://travis-ci.org/Originate/kappamaki" alt="Build Status" target="_blank"><img src="https://travis-ci.org/Originate/kappamaki.svg?branch=master"></a> [![Code Climate](https://codeclimate.com/github/Originate/kappamaki/badges/gpa.svg)](https://codeclimate.com/github/Originate/kappamaki) [![Coverage Status](https://coveralls.io/repos/Originate/kappamaki/badge.svg?branch=master&service=github)](https://coveralls.io/github/Originate/kappamaki?branch=master) [![Dependency Status](https://gemnasium.com/Originate/kappamaki.svg)](https://gemnasium.com/Originate/kappamaki)
+[![Code Climate](https://codeclimate.com/github/kevgo/kappamaki/badges/gpa.svg)](https://codeclimate.com/github/kevgo/kappamaki)
+[![Coverage Status](https://coveralls.io/repos/kevgo/kappamaki/badge.svg?branch=master&service=github)](https://coveralls.io/github/kevgo/kappamaki?branch=master)
+[![Dependency Status](https://gemnasium.com/kevgo/kappamaki.svg)](https://gemnasium.com/kevgo/kappamaki)
 
-The name comes from the sushi roll filled with pieces of cucumber,
-which adds naturalness and freshness to a meal.
-
-
-## Usage
-
-Kappamaki provides a number of helper methods that can be used directly
-in your Cucumber step definitions.
+Kappamaki provides helper methods that can be used in your Cucumber step definitions.
+The name comes from the sushi roll filled with cucumber.
 
 ### from_sentence
 
@@ -17,18 +13,18 @@ Parses a list of values from a sentence.
 Given the restaurant offers cucumber rolls, philadelphia rolls, and avocado rolls
 ```
 
-Your step definition would look like this:
+Your definition to parse this Cucumber step would look like this:
 
 ```ruby
 Given /^the restaurant offers (.+)$/ do |menu_list|
 
-  # menu_list is this string:
+  # "menu_list" is this string:
   'cucumber rolls, philadelphia rolls, and avocado rolls'
 
-  # Let's parse this into an array
+  # let's parse this into an array
   menu = Kappamaki.from_sentence menu_list
 
-  # The result, menu, is this array:
+  # the result (the variable "menu") is this array:
   ['cucumber rolls', 'philadelphia rolls', 'avocado rolls']
 
   # Now we can set up our menu here...

@@ -6,9 +6,9 @@ Gem::Specification.new do |spec|
   spec.name     = 'kappamaki'
   spec.version  = '1.0.0'
   spec.authors  = ['Kevin Goslar']
-  spec.email    = ['kevin.goslar@originate.com']
+  spec.email    = ['kevin.goslar@gmail.com']
   spec.summary  = 'Tools for natural, high-level, sophisticated Cucumber steps'
-  spec.homepage = 'https://github.com/Originate/kappamaki'
+  spec.homepage = 'https://github.com/kevgo/kappamaki'
   spec.license  = 'MIT'
   spec.description = <<-EOF
     Kappamaki is a collection of string manipulation methods

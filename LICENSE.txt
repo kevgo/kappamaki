@@ -1,4 +1,4 @@
-Copyright (c) 2014 Originate
+Copyright (c) 2014 Kevin Goslar
 
 MIT License
 
