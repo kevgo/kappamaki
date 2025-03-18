@@ -1,22 +1,15 @@
 AllCops:
-
   NewCops: enable
-
   DisplayCopNames: true
-
   DisplayStyleGuide: true
-
   Include:
     - '**/Rakefile'
-
 
 Security/Eval:
   Enabled: false
 
-
 Layout/LineLength:
   Max: 100
-
 
 Layout/AccessModifierIndentation:
   EnforcedStyle: outdent
