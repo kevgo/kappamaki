@@ -1,5 +1,7 @@
 AllCops:
 
+  NewCops: enable
+
   DisplayCopNames: true
 
   DisplayStyleGuide: true
@@ -8,33 +10,33 @@ AllCops:
     - '**/Rakefile'
 
 
-Lint/Eval:
+Security/Eval:
   Enabled: false
 
 
-Metrics/LineLength:
+Layout/LineLength:
   Max: 100
 
 
-Style/AccessModifierIndentation:
+Layout/AccessModifierIndentation:
   EnforcedStyle: outdent
 
 Style/Documentation:
   Enabled: false
 
-Style/EmptyLines:
+Layout/EmptyLines:
   Enabled: false
 
-Style/EmptyLinesAroundClassBody:
+Layout/EmptyLinesAroundClassBody:
   EnforcedStyle: empty_lines
 
-Style/EmptyLinesAroundModuleBody:
+Layout/EmptyLinesAroundModuleBody:
   EnforcedStyle: empty_lines
 
 Style/MethodDefParentheses:
   EnforcedStyle: require_no_parentheses
 
-Style/MultilineOperationIndentation:
+Layout/MultilineOperationIndentation:
   Enabled: false
 
 Style/WordArray:
