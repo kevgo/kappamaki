@@ -1,6 +1,4 @@
-[![Code Climate](https://codeclimate.com/github/kevgo/kappamaki/badges/gpa.svg)](https://codeclimate.com/github/kevgo/kappamaki)
 [![Coverage Status](https://coveralls.io/repos/kevgo/kappamaki/badge.svg?branch=master&service=github)](https://coveralls.io/github/kevgo/kappamaki?branch=master)
-[![Dependency Status](https://gemnasium.com/kevgo/kappamaki.svg)](https://gemnasium.com/kevgo/kappamaki)
 
 Kappamaki provides helper methods that can be used in your Cucumber step definitions.
 The name comes from the sushi roll filled with cucumber.
