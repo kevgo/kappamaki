@@ -5,7 +5,7 @@ Inspired by the simplicity of a cucumber-filled sushi roll, Kappamaki provides
 helper methods that can be used in your Ruby-based Cucumber setup to implement
 steps that define data using natural language.
 
-### from_sentence
+## from_sentence
 
 Parses a list of values from a sentence.
 
@@ -31,7 +31,7 @@ Given /^the restaurant offers (.+)$/ do |menu_list|
 end
 ```
 
-### attributes_from_sentence
+## attributes_from_sentence
 
 Parses key-value pairs from natural sentences.
 
@@ -59,7 +59,7 @@ When /^I order a dinner with (.+)$/ do |order_items|
 end
 ```
 
-### symbolize_keys_deep
+## symbolize_keys_deep
 
 Converts the keys of a hash into symbols.
 
