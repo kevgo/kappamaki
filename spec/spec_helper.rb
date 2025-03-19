@@ -1,7 +1,6 @@
 if ENV["CI"]
   require "simplecov"
   SimpleCov.start
-  puts "required simplecov"
 end
 
 require "bundler/setup"
