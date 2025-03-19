@@ -13,7 +13,7 @@ Parses a list of values from a sentence.
 Given the restaurant offers cucumber rolls, philadelphia rolls, and avocado rolls
 ```
 
-Your implementation of this Cucumber step would look something like this:
+Your implementation of this Cucumber step would look like this:
 
 ```ruby
 Given /^the restaurant offers (.+)$/ do |menu_list|
