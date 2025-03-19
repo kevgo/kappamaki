@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.version  = '1.0.0'
   spec.authors  = ['Kevin Goslar']
   spec.email    = ['kevin.goslar@gmail.com']
-  spec.summary  = 'Tools for natural, high-level, sophisticated Cucumber steps'
+  spec.summary  = 'Tools for defining data using natural language in Cucumber steps'
   spec.homepage = 'https://github.com/kevgo/kappamaki'
   spec.license  = 'MIT'
   spec.description = <<-EOF
