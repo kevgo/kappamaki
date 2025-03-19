@@ -1,5 +1,4 @@
-# coding: utf-8
-lib = File.expand_path('../lib', __FILE__)
+lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
@@ -17,7 +16,6 @@ Gem::Specification.new do |spec|
 
   spec.files         = `git ls-files -z`.split("\x0")
   spec.executables   = []
-  spec.test_files    = spec.files.grep('spec')
   spec.require_paths = ['lib']
 
   spec.add_development_dependency 'bundler'
@@ -27,4 +25,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'simplecov'
 
   spec.required_ruby_version = '>= 1.9.3'
+  spec.metadata['rubygems_mfa_required'] = 'true'
 end
