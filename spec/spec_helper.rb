@@ -1,7 +1,8 @@
-# if ENV['CI']
-#   require 'coveralls'
-#   Coveralls.wear!
-# end
+if ENV['CI']
+  require 'simplecov'
+  SimpleCov.start
+  puts "required simplecov"
+end
 
 require 'bundler/setup'
 Bundler.setup
