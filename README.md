@@ -2,8 +2,8 @@
 [![Coverage Status](https://coveralls.io/repos/kevgo/kappamaki/badge.svg?branch=master&service=github)](https://coveralls.io/github/kevgo/kappamaki?branch=master)
 
 Kappamaki provides helper methods that can be used in your Ruby-based Cucumber
-step definitions of steps that define data using natural language. The name
-comes from the sushi roll filled with cucumber.
+definitions for steps that define data using natural language. The name comes
+from the sushi roll filled with cucumber.
 
 ### from_sentence
 
