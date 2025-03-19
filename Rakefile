@@ -8,7 +8,7 @@ task default: [:lint, :spec]
 
 desc "Fix all auto-fixable issues"
 task "fix" do
-  sh "bundle exec rubocop -a"
+  sh "bundle exec rubocop -A"
   sh "dprint fmt"
 end
 
