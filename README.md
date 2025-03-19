@@ -1,8 +1,9 @@
 [![CI](https://github.com/kevgo/kappamaki/actions/workflows/ruby.yml/badge.svg)](https://github.com/kevgo/kappamaki/actions/workflows/ruby.yml)
 [![Coverage Status](https://coveralls.io/repos/kevgo/kappamaki/badge.svg?branch=master&service=github)](https://coveralls.io/github/kevgo/kappamaki?branch=master)
 
-Kappamaki provides helper methods that can be used in your Ruby-based Cucumber step definitions of steps that define data using natural language.
-The name comes from the sushi roll filled with cucumber.
+Kappamaki provides helper methods that can be used in your Ruby-based Cucumber
+step definitions of steps that define data using natural language. The name
+comes from the sushi roll filled with cucumber.
 
 ### from_sentence
 
@@ -29,7 +30,6 @@ Given /^the restaurant offers (.+)$/ do |menu_list|
   # Now we can set up our menu here...
 end
 ```
-
 
 ### attributes_from_sentence
 
@@ -58,7 +58,6 @@ When /^I order a dinner with (.+)$/ do |order_items|
   create :order, order_data
 end
 ```
-
 
 ### symbolize_keys_deep
 
@@ -92,16 +91,14 @@ Then ^I am served these items do |entrees|
 end
 ```
 
-
 ## Installation
 
-* add `gem 'kappamaki'` to your application's Gemfile
-* run `bundle install`
-* add `require 'kappamaki'` to your `/features/support/env.rb` file
-
+- add `gem 'kappamaki'` to your application's Gemfile
+- run `bundle install`
+- add `require 'kappamaki'` to your `/features/support/env.rb` file
 
 ## Development
 
-* run tests: `bundle exec rake`
-* update dependencies: `bundle update`
-* push a new version to Rubygems: `rake release`
+- run tests: `bundle exec rake`
+- update dependencies: `bundle update`
+- push a new version to Rubygems: `rake release`

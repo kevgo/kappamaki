@@ -3,7 +3,7 @@ AllCops:
   DisplayCopNames: true
   DisplayStyleGuide: true
   Include:
-    - '**/Rakefile'
+    - "**/Rakefile"
 
 Layout/LineLength:
   Max: 100
