@@ -23,6 +23,6 @@ jobs:
           ruby-version: ${{ matrix.ruby-version }}
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
       - run: bundle exec rake
-      - run: bundle exec fix
+      - run: bundle exec rake fix
       - run: git diff HEAD --exit-code --color
       - uses: coverallsapp/github-action@v2
