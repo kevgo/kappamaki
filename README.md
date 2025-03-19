@@ -1,7 +1,7 @@
 [![CI](https://github.com/kevgo/kappamaki/actions/workflows/ruby.yml/badge.svg)](https://github.com/kevgo/kappamaki/actions/workflows/ruby.yml)
 [![Coverage Status](https://coveralls.io/repos/kevgo/kappamaki/badge.svg?branch=master&service=github)](https://coveralls.io/github/kevgo/kappamaki?branch=master)
 
-Kappamaki provides helper methods that can be used in your Cucumber step definitions.
+Kappamaki provides helper methods that can be used in your Ruby-based Cucumber step definitions of steps that define data using natural language.
 The name comes from the sushi roll filled with cucumber.
 
 ### from_sentence
