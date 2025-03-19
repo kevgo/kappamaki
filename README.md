@@ -2,8 +2,8 @@
 [![Coverage Status](https://coveralls.io/repos/github/kevgo/kappamaki/badge.svg?branch=main)](https://coveralls.io/github/kevgo/kappamaki?branch=main)
 
 Inspired by the simplicity of a cucumber-filled sushi roll, Kappamaki provides
-helper methods that can be used in your Ruby-based Cucumber setup to implement
-steps that define data using natural language.
+helper methods to implement Cucumber steps that define data using natural
+language.
 
 ## from_sentence
 
@@ -47,7 +47,7 @@ When /^I order a dinner with (.+)$/ do |order_items|
   # order_items is this string:
   # 'starter: "miso soup" and entree: "cucumber rolls"'
 
-  # Let's parse that string using Kappamaki
+  # Let's parse this string using Kappamaki
   order_data = Kappamaki.attributes_from_sentence order_items
 
   # The result, order_data, is this hash:
