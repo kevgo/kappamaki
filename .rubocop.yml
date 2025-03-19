@@ -4,6 +4,7 @@ AllCops:
   DisplayStyleGuide: true
   Include:
     - "**/Rakefile"
+  SuggestExtensions: false
 
 Layout/LineLength:
   Max: 100
