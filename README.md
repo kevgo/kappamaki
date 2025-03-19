@@ -1,5 +1,5 @@
 [![CI](https://github.com/kevgo/kappamaki/actions/workflows/ruby.yml/badge.svg)](https://github.com/kevgo/kappamaki/actions/workflows/ruby.yml)
-[![Coverage Status](https://coveralls.io/repos/kevgo/kappamaki/badge.svg?branch=master&service=github)](https://coveralls.io/github/kevgo/kappamaki?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/kevgo/kappamaki/badge.svg?branch=main)](https://coveralls.io/github/kevgo/kappamaki?branch=main)
 
 Inspired by the simplicity of a cucumber-filled sushi roll, Kappamaki provides
 helper methods that can be used in your Ruby-based Cucumber setup to implement
