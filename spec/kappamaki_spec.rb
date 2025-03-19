@@ -35,7 +35,6 @@ describe :from_sentence do
 end
 
 describe "symbolize_keys_deep!" do
-
   it "converts string keys to symbols" do
     actual = { "one" => "two", "alpha" => "beta" }
     Kappamaki.symbolize_keys_deep! actual
@@ -47,5 +46,4 @@ describe "symbolize_keys_deep!" do
     Kappamaki.symbolize_keys_deep! actual
     expect(actual).to eq one: { alpha: "beta" }
   end
-
 end
