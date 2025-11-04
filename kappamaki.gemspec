@@ -11,7 +11,7 @@ Gem::Specification.new do |gem|
   gem.license  = "MIT"
   gem.description = <<-DESC
     Kappamaki is a collection of string manipulation methods
-    that make parsing high-lever cucumber steps easier.
+    that make parsing high-level cucumber steps easier.
   DESC
 
   gem.files         = `git ls-files -z`.split("\x0")
