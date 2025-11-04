@@ -15,14 +15,18 @@ module Kappamaki
 
   # Reverse of ActiveSupport's "to_sentence" method
   def self.from_sentence(sentence)
+    raise ArgumentError, "sentence must be a String" unless sentence.is_a?(String)
+
     sentence.gsub(", and ", ", ")
             .gsub(" and ", ", ")
             .split(", ")
-            .map { |s| s.delete '"' }
+            .map { |s| s.delete('"') }
   end
 
   # Converts all keys in the given hash to symbols
   def self.symbolize_keys_deep!(hash)
+    raise ArgumentError, "hash must be a Hash" unless hash.is_a?(Hash)
+
     hash.keys.each do |k|
       ks = k.to_sym
       hash[ks] = hash.delete k
