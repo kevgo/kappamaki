@@ -25,8 +25,8 @@ module Kappamaki
   def self.symbolize_keys_deep!(hash)
     hash.keys.each do |k|
       ks = k.to_sym
-      hash[ks] = hash.delete k
-      symbolize_keys_deep! hash[ks] if hash[ks].is_a? Hash
+      hash[ks] = hash.delete(k)
+      symbolize_keys_deep!(hash[ks]) if hash[ks].is_a?(Hash)
     end
   end
 end
