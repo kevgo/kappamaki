@@ -3,7 +3,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |gem|
   gem.name     = "kappamaki"
-  gem.version  = "1.0.0"
+  gem.version  = "1.1.0"
   gem.authors  = ["Kevin Goslar"]
   gem.email    = ["kevin.goslar@gmail.com"]
   gem.summary  = "Tools for defining data using natural language in Cucumber steps"
