@@ -42,7 +42,6 @@ module Kappamaki
     hash.keys.each do |key|
       key_sym = key.to_sym
       value = hash.delete(key)
-
       hash[key_sym] = case value
                       when Hash
                         symbolize_keys_deep!(value)
