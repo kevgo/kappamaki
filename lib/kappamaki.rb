@@ -18,7 +18,7 @@ module Kappamaki
     sentence.gsub(", and ", ", ")
             .gsub(" and ", ", ")
             .split(", ")
-            .map { |s| s.delete '"' }
+            .map { |s| s.delete('"') }
   end
 
   # Converts all keys in the given hash to symbols
