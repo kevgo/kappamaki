@@ -31,7 +31,7 @@ module Kappamaki
             .map { |s| s.delete('"') }
   end
 
-  # Converts all keys in the given hash to symbols
+  # Converts all keys in the given hash to symbols, recursively handling nested hashes and arrays
   #
   # @param hash [Hash] the hash to modify
   # @return [Hash] the modified hash with symbolized keys
@@ -39,10 +39,20 @@ module Kappamaki
   def self.symbolize_keys_deep!(hash)
     raise ArgumentError, "hash must be a Hash" unless hash.is_a?(Hash)
 
-    hash.keys.each do |k|
-      ks = k.to_sym
-      hash[ks] = hash.delete(k)
-      symbolize_keys_deep!(hash[ks]) if hash[ks].is_a?(Hash)
+    hash.keys.each do |key|
+      key_sym = key.to_sym
+      value = hash.delete(key)
+
+      hash[key_sym] = case value
+                      when Hash
+                        symbolize_keys_deep!(value)
+                      when Array
+                        value.map { |item| item.is_a?(Hash) ? symbolize_keys_deep!(item) : item }
+                      else
+                        value
+                      end
     end
+
+    hash
   end
 end
