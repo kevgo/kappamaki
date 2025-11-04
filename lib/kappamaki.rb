@@ -10,11 +10,11 @@ module Kappamaki
   # @return [Hash] the parsed key-value pairs
   # @raise [ArgumentError] if sentence is not a String
   def self.attributes_from_sentence(sentence)
-    attributes = Kappamaki.from_sentence(sentence)
-                          .map { |piece| piece.split ": " }
-                          .map { |key, value| [key.to_sym, value] }
-                          .flatten
-    Hash[*attributes]
+    raise ArgumentError, "sentence must be a String" unless sentence.is_a?(String)
+
+    Kappamaki.from_sentence(sentence)
+             .map { |piece| piece.split(": ") }
+             .to_h { |key, value| [key.to_sym, value] }
   end
 
   # Reverse of ActiveSupport's "to_sentence" method
