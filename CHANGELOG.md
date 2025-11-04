@@ -2,7 +2,7 @@
 
 ## Unreleased
 
-- Update minimum Ruby version to 2.7
+- Update minimum Ruby version to 3.2
 - The `symbolize_keys` function is now more generic
 - The Gem uses more up-to-date Ruby logic (#26)
 - Check argument types (#25)
