@@ -75,7 +75,7 @@ Then I am served these items
 Your step definition would look like this:
 
 ```ruby
-Then ^I am served these items do |entrees|
+Then /^I am served these items$/ do |entrees|
   entrees.hashes.each do |entree|
 
     # entree is this hash:
