@@ -8,6 +8,6 @@
 
 - in a branch:
   - update CHANGELOG.md
-  - search and replace all occurrences of `1.0.0`
+  - search and replace all occurrences of `1.1.0`
   - ship this branch
 - push a new version to Rubygems: `rake release`
