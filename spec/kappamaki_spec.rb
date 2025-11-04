@@ -39,6 +39,10 @@ describe Kappamaki do
       end
     end
 
+    it "handles empty string" do
+      expect(Kappamaki.from_sentence("")).to eq []
+    end
+
     it "raises ArgumentError when given non-string input" do
       expect { Kappamaki.from_sentence(nil) }.to raise_error(ArgumentError, "sentence must be a String")
       expect { Kappamaki.from_sentence([]) }.to raise_error(ArgumentError, "sentence must be a String")
@@ -56,6 +60,32 @@ describe Kappamaki do
       actual = { "one" => { "alpha" => "beta" } }
       Kappamaki.symbolize_keys_deep!(actual)
       expect(actual).to eq one: { alpha: "beta" }
+    end
+
+    it "handles arrays containing hashes" do
+      actual = { "items" => [{ "name" => "foo" }, { "name" => "bar" }] }
+      Kappamaki.symbolize_keys_deep!(actual)
+      expect(actual).to eq items: [{ name: "foo" }, { name: "bar" }]
+    end
+
+    it "handles arrays containing non-hash values" do
+      actual = { "items" => ["foo", "bar", 123] }
+      Kappamaki.symbolize_keys_deep!(actual)
+      expect(actual).to eq items: ["foo", "bar", 123]
+    end
+
+    it "handles empty hash" do
+      actual = {}
+      result = Kappamaki.symbolize_keys_deep!(actual)
+      expect(result).to eq({})
+      expect(actual).to eq({})
+    end
+
+    it "returns the modified hash" do
+      actual = { "one" => "two" }
+      result = Kappamaki.symbolize_keys_deep!(actual)
+      expect(result).to eq one: "two"
+      expect(result).to be(actual)
     end
 
     it "raises ArgumentError when given non-hash input" do
