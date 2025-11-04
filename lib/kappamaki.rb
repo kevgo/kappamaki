@@ -18,15 +18,15 @@ module Kappamaki
     sentence.gsub(", and ", ", ")
             .gsub(" and ", ", ")
             .split(", ")
-            .map { |s| s.delete '"' }
+            .map { |s| s.delete('"') }
   end
 
   # Converts all keys in the given hash to symbols
   def self.symbolize_keys_deep!(hash)
     hash.keys.each do |k|
       ks = k.to_sym
-      hash[ks] = hash.delete k
-      symbolize_keys_deep! hash[ks] if hash[ks].is_a? Hash
+      hash[ks] = hash.delete(k)
+      symbolize_keys_deep!(hash[ks]) if hash[ks].is_a?(Hash)
     end
   end
 end
