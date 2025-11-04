@@ -31,7 +31,7 @@ module Kappamaki
             .map { |s| s.delete('"') }
   end
 
-  # Converts all keys in the given hash to symbols, recursively handling nested hashes and arrays
+  # Converts all keys in the given hash to symbols
   #
   # @param hash [Hash] the hash to modify
   # @return [Hash] the modified hash with symbolized keys
