@@ -23,6 +23,8 @@ module Kappamaki
   # @return [Array<String>] the parsed array of items
   # @raise [ArgumentError] if sentence is not a String
   def self.from_sentence(sentence)
+    raise ArgumentError, "sentence must be a String" unless sentence.is_a?(String)
+
     sentence.gsub(", and ", ", ")
             .gsub(" and ", ", ")
             .split(", ")
@@ -35,6 +37,8 @@ module Kappamaki
   # @return [Hash] the modified hash with symbolized keys
   # @raise [ArgumentError] if hash is not a Hash
   def self.symbolize_keys_deep!(hash)
+    raise ArgumentError, "hash must be a Hash" unless hash.is_a?(Hash)
+
     hash.keys.each do |k|
       ks = k.to_sym
       hash[ks] = hash.delete(k)
