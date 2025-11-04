@@ -18,6 +18,6 @@ Gem::Specification.new do |gem|
   gem.executables   = []
   gem.require_paths = ["lib"]
 
-  gem.required_ruby_version = ">= 2.0"
+  gem.required_ruby_version = ">= 2.7"
   gem.metadata["rubygems_mfa_required"] = "true"
 end
