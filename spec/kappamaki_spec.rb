@@ -9,9 +9,10 @@ describe Kappamaki do
       'name: "Foo", body: "Bar" and title: "Baz"' => { name: "Foo", body: "Bar", title: "Baz" },
       'name: "Foo", body: "Bar", and title: "Baz"' => { name: "Foo", body: "Bar", title: "Baz" }
     }
-    test_data.each do |sentence, expected_result|
-      it "parses '#{sentence}' into '#{expected_result}'" do
-        expect(Kappamaki.attributes_from_sentence(sentence)).to eql expected_result
+    test_data.each do |give, want|
+      it "parses '#{give}' into '#{want}'" do
+        have = Kappamaki.attributes_from_sentence(give)
+        expect(have).to eql want
       end
     end
 
@@ -33,9 +34,10 @@ describe Kappamaki do
       "one, two, three and four" => %w[one two three four],
       '"one", "two", "three" and "four"' => %w[one two three four]
     }
-    test_data.each do |sentence, expected_result|
-      it "parses '#{sentence}' into '#{expected_result}'" do
-        expect(Kappamaki.from_sentence(sentence)).to eql expected_result
+    test_data.each do |give, want|
+      it "parses '#{give}' into '#{want}'" do
+        have = Kappamaki.from_sentence(give)
+        expect(have).to eql want
       end
     end
 
